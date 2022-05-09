@@ -64,8 +64,9 @@
                          buttons:{"Add":function()
                                         {
                                              var addtitle = $("#newprotxt").val();
-                                             $("<li><a href='#"+addtitle+"'>"+addtitle+"</a></li>").appendTo("#main");
-                                             $("<ol id='"+addtitle+"'></ol>").appendTo("#projects");
+                                             var replace = addtitle.split(" ").join("_");
+                                             $("<li><a href='#"+replace+"'>"+addtitle+"</a></li>").appendTo("#main");
+                                             $("<ol id='"+replace+"'></ol>").appendTo("#projects");
                                              $("#projects").tabs('refresh');
                                              var tabcount = $("projects ,ui-tabs-nav li").length;
                                              $("#projects").tabs("option", "active", tabcount-1);
