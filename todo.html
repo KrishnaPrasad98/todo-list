@@ -66,7 +66,7 @@
                                              var addtitle = $("#newprotxt").val();
                                              var replace = addtitle.split(" ").join("_");
                                              $("<li><a href='#"+replace+"'>"+addtitle+"</a></li>").appendTo("#main");
-                                             $("<ol id='"+replace+"'></ol>").appendTo("#projects");
+                                             $("<ol id='"+replace+"'></ol>").appendTo("#projects").sortable({axis:"y"});
                                              $("#projects").tabs('refresh');
                                              var tabcount = $("projects ,ui-tabs-nav li").length;
                                              $("#projects").tabs("option", "active", tabcount-1);
