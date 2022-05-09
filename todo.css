@@ -1,0 +1,15 @@
+/* #projects {
+     border: 2px solid red;
+}
+ */
+
+li input{
+     margin-right: 15px;
+     margin-left: 35px;
+}
+
+.btn-dialog {
+     margin-left: 3rem;
+     margin-top: 1.5rem;
+     width: 6rem;
+}
