@@ -44,7 +44,7 @@
                                              $("#projects").tabs('refresh');
                                              var activetab = $("#projects").tabs("option","active");
                                              var title = $("#main > li:nth-child("+(activetab+1)+") > a").attr("href");
-                                             $("#projects" + title).append("<li><input type='checkbox'>"+$("#newtasktxt").val()+"</li>");
+                                             $(title).append("<li><input type='checkbox'>"+$("#newtasktxt").val()+"</li>");
                                              $("#newtasktxt").val(" ");
                                              $(this).dialog('close');
                                         },
