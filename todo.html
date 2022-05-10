@@ -17,7 +17,7 @@
           $(document).ready(function ()
           {
                $("#projects").tabs();
-
+               $("input [type=checkbox]").removeAttr("checked");
                $("ul").sortable({
                     opacity: 0.5,
                     distance: 0.5,
@@ -31,10 +31,12 @@
                     // containment: "li"
                });
 
-
-               // <div style="display: none;" title="Add Task" id="addtask-pop">
-               // <label style="margin-right: .5rem; font-weight: bold;" for="newtasktxt">Task Name:</label> <input id="newtasktxt" style="padding: .5rem; background-color: rgba(0,0,0,0.1);" type="text">
-               // </div>
+               $("input [type=checkbox]").removeAttr("checked");
+               $("#projects").on("click", "input[type=checkbox]",  function(){
+                    $(this).closest("li").slideUp(function(){
+                         $(this).remove();
+                    });
+               });
 
                $("#btn-addtask").button().click(function()
                {
@@ -123,7 +125,7 @@
           <div style="display: none;" title="Add Task" id="addtask-pop">
                <label style="margin-right: .5rem; font-weight: bold;" for="newtasktxt">Task Name:</label> <input id="newtasktxt" style="padding: .5rem; background-color: rgba(0,0,0,0.1);" type="text">
           </div>
+
      </div>
-     
 </body>
 </html>
